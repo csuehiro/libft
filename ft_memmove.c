@@ -6,7 +6,7 @@
 /*   By: csuehiro <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/25 16:41:41 by csuehiro          #+#    #+#             */
-/*   Updated: 2020/01/31 21:45:28 by csuehiro         ###   ########.fr       */
+/*   Updated: 2020/02/02 15:18:36 by csuehiro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 	char	*auxsrc;
 
 	cont = -1;
-	auxdst = dst;
+	auxdst = (char *)dst;
 	auxsrc = (char *)src;
 	if (dst == 0 && src == 0)
 		return (0);

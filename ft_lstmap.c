@@ -6,7 +6,7 @@
 /*   By: csuehiro <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/29 20:59:18 by csuehiro          #+#    #+#             */
-/*   Updated: 2020/01/31 20:14:22 by csuehiro         ###   ########.fr       */
+/*   Updated: 2020/02/02 18:07:28 by csuehiro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,9 +17,9 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 	t_list	*newlst;
 	t_list	*aux;
 
-	newlst = 0;
-	if (lst == 0)
+	if (lst == 0 || f == 0)
 		return (0);
+	newlst = 0;
 	while (lst != 0)
 	{
 		aux = ft_lstnew(f(lst->content));

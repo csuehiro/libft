@@ -6,7 +6,7 @@
 /*   By: csuehiro <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/29 20:42:40 by csuehiro          #+#    #+#             */
-/*   Updated: 2020/01/29 20:57:52 by csuehiro         ###   ########.fr       */
+/*   Updated: 2020/02/02 17:38:43 by csuehiro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,16 +14,12 @@
 
 void	ft_lstiter(t_list *lst, void (*f)(void *))
 {
-	t_list	*aux;
-
-	if (lst != 0)
+	if (f != 0)
 	{
-		aux = lst;
-		while (aux->next != 0)
+		while (lst != 0)
 		{
-			f(aux->content);
-			aux = aux->next;
+			f(lst->content);
+			lst = lst->next;
 		}
-		f(aux->content);
 	}
 }

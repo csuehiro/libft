@@ -6,7 +6,7 @@
 /*   By: csuehiro <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/25 15:38:10 by csuehiro          #+#    #+#             */
-/*   Updated: 2020/01/25 15:43:07 by csuehiro         ###   ########.fr       */
+/*   Updated: 2020/02/02 15:08:44 by csuehiro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,14 @@
 
 void	ft_bzero(void *s, size_t n)
 {
-	if (n != 0)
+	int		i;
+	char	*aux;
+
+	i = 0;
+	aux = (char *)s;
+	while (i < (int)n)
 	{
-		s = ft_memset(s, 0, n);
+		aux[i] = 0;
+		i++;
 	}
 }

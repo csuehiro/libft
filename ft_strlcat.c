@@ -6,7 +6,7 @@
 /*   By: csuehiro <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/26 16:34:08 by csuehiro          #+#    #+#             */
-/*   Updated: 2020/02/01 17:39:29 by csuehiro         ###   ########.fr       */
+/*   Updated: 2020/02/02 17:01:32 by csuehiro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,27 +15,22 @@
 size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 {
 	int	cont;
-	int	aux;
-	int	bla;
+	int	lendst;
+	int	lensrc;
 
-	cont = ft_strlen(dst);
-	aux = 0;
-	bla = 0;
-	while (cont < (int)dstsize - 1 && src[aux] != '\0')
+	cont = 0;
+	lendst = ft_strlen(dst);
+	lensrc = ft_strlen(src);
+	if ((int)dstsize == 0)
+		return ((size_t)lensrc);
+	if (lendst >= (int)dstsize)
+		return ((size_t)lensrc + dstsize);
+	while (src[cont] != 0 && ((int)dstsize - lendst - 1) != 0)
 	{
-		dst[cont] = src[aux];
+		dst[lendst + cont] = src[cont];
 		cont++;
-		aux++;
-		bla = 1;
+		dstsize--;
 	}
-	if (cont == (int)dstsize - 1 || src[aux] == '\0')
-		dst[cont] = '\0';
-	while (src[aux] != '\0')
-	{
-		aux++;
-		cont++;
-	}
-	if (bla == 0 && (int)dstsize <= (int)ft_strlen(dst))
-		return (ft_strlen(src) + dstsize);
-	return ((size_t)cont);
+	dst[lendst + cont] = '\0';
+	return ((size_t)lensrc + (size_t)lendst);
 }
