@@ -6,7 +6,7 @@
 #    By: csuehiro <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/01/22 23:25:25 by csuehiro          #+#    #+#              #
-#    Updated: 2020/01/31 19:47:28 by csuehiro         ###   ########.fr        #
+#    Updated: 2020/02/02 18:42:25 by csuehiro         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -36,7 +36,7 @@ $(NAME):
 	ar rc $(NAME) $(OBJS)
 	ranlib $(NAME)
 
-bonus:
+bonus: all
 	gcc $(FLAGS) -I $(HEADERS) -c $(SRC_BONUS)
 	ar rc $(NAME) $(OBJS_BONUS)
 	ranlib $(NAME)
