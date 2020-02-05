@@ -6,15 +6,15 @@
 /*   By: csuehiro <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/20 20:43:30 by csuehiro          #+#    #+#             */
-/*   Updated: 2020/02/01 15:30:54 by csuehiro         ###   ########.fr       */
+/*   Updated: 2020/02/03 22:21:08 by csuehiro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stddef.h>
+#include "libft.h"
 
 size_t	ft_strlen(const char *s)
 {
-	int	cont;
+	size_t	cont;
 
 	cont = 0;
 	while (s[cont] != '\0')

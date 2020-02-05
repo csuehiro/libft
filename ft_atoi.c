@@ -6,7 +6,7 @@
 /*   By: csuehiro <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/22 22:08:02 by csuehiro          #+#    #+#             */
-/*   Updated: 2020/02/01 17:42:32 by csuehiro         ###   ########.fr       */
+/*   Updated: 2020/02/05 19:46:42 by csuehiro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,7 @@ int	ft_atoi(const char *str)
 	}
 	while (str[i] >= '0' && str[i] <= '9')
 	{
-		nb = nb * 10 + str[i] - '0';
+		nb = (nb * 10) + (str[i] - '0');
 		i++;
 	}
 	return (nb * sign);

@@ -6,7 +6,7 @@
 /*   By: csuehiro <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/25 15:48:11 by csuehiro          #+#    #+#             */
-/*   Updated: 2020/02/03 19:33:55 by csuehiro         ###   ########.fr       */
+/*   Updated: 2020/02/03 22:10:04 by csuehiro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	*ft_memcpy(void *dst, const void *src, size_t n)
 {
-	int		cont;
+	size_t	cont;
 	char	*auxdst;
 	char	*auxsrc;
 
@@ -23,7 +23,7 @@ void	*ft_memcpy(void *dst, const void *src, size_t n)
 		return (0);
 	auxdst = (char *)dst;
 	auxsrc = (char *)src;
-	while (cont < (int)n)
+	while (cont < n)
 	{
 		auxdst[cont] = auxsrc[cont];
 		cont++;
